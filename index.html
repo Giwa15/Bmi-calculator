@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+</head>
+<body>
+    
+    <p id="yourBmi"></p>
+
+    <button onclick="getBmiParameters()"> Click to know your BMI </button>
+
+
+    <script>
+
+        function bmi (weight, height) {
+
+            var bmi = weight / (height*height);
+
+            document.getElementById("yourBmi").innerHTML = "Your bmi is "  +  bmi.toFixed(3);
+                
+        }
+
+        function getBmiParameters() {
+            var weight = prompt("What do you weight? ");
+            var height = prompt("How tall are you? ");
+
+            bmi(weight, height);
+        }
+
+        
+
+
+
+
+    </script>
+</body>
+</html>
